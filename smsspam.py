@@ -84,11 +84,11 @@ def plot_confusion_matrix(y_true, y_pred):
    sns.heatmap(mtx, annot=True, fmt='d', linewidths=.5, cmap="Blues", cbar=False)
    plt.ylabel('True label')
    plt.xlabel('Predicted label')
-   plt.savefig('RNN/results/test.jpg')
+   plt.savefig('C:/Users/nandh/Desktop/GitFolder/RNN/test.jpg')
 
 
 preds = (model.predict(padded_test) > 0.5).astype("int32")
 c_report(y_test, preds)
 
 plot_confusion_matrix(y_test, preds)
-model.save("RNN/results/model/spam_model")
+model.save("C:/Users/nandh/Desktop/GitFolder/RNN/model/spam_model")
